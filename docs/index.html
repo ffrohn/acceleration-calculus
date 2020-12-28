@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>Empirical Evaluation of: A Calculus for Modular Loop Acceleration</title>
+    <style>
+      table, th, td {border: 1px solid black;}
+      td {text-align: center}
+    </style>
+    <body>
+
+      <h1>Empirical Evaluation of: <a href="https://arxiv.org/abs/2001.01516"><i>A Calculus for Modular Loop Acceleration</i></a></h1>
+
+      <hr/>
+
+      <h2>Artifact Evaluation</h2>
+
+      <a href="https://doi.org/10.5281/zenodo.3676348">Here</a> you can find the zip-file for the artifact evaluation committee.
+
+      <hr/>
+
+      <h2>Downloading LoAT</h2>
+
+      <p>
+        We provide a
+        <a href="https://github.com/aprove-developers/LoAT/releases/tag/tacas20">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
+        Apart from that, LoAT is open-source and available on <a href="https://github.com/aprove-developers/LoAT/tree/tacas20">Github</a>
+      </p>
+
+      <hr/>
+
+      <h2>Examples</h2>
+
+      <ul>
+        <li><a href="loops.zip">Here</a> you can find the loops that we used for our evaluation.</li>
+        <li><a href="flata.zip">Here</a> you can find the loops that we used for our evaluation in Flata's input format.</li>
+        <li><a href="examples.zip">Here</a> you can find the examples from our paper.</li>
+      </ul>
+
+      <hr/>
+
+      <h2>Evaluation</h2>
+
+      <h3>StarExec-Jobs</h3>
+
+      <p>
+        Below we provide links to the StarExec-Jobs of our evaluation.
+      </p>
+      <ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37260">full version</a> of our acceleration calculus</li>
+        <ul><li>Invocation: <tt>loat-static $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37267"><i>acceleration via monotonicity</i></a></li>
+        <ul><li>Invocation: <tt>loat-static --acceleration mon $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37266"><i>acceleration via metering functions</i></a></li>
+        <ul><li>Invocation: <tt>loat-static --acceleration meter $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37264">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i></li>
+        <ul><li>Invocation: <tt>loat-static --acceleration no-ev-inc $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37263">restricted version</a> of our acceleration calculus without <i>acceleration via eventual decrease</i></li>
+        <ul><li>Invocation: <tt>loat-static --acceleration no-ev-dec $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37268">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i></li>
+        <ul><li>Invocation: <tt>loat-static --acceleration no-ev-mon $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37742">Flata</a></li>
+        <ul><li>Invocation: <tt>java -cp flata.jar:antlr-3.3-complete.jar:nts.jar verimag.main.Calculator input.rel -noGLPK</tt></li></ul>
+      </ul>
+
+      <p>
+        In the tables on StarExec, the result "YES" means that the loop in question was accelerated exactly, "MAYBE" means that it was accelerated approximately, and "NO" means that the tool failed to accelerate it. By clicking on one of the examples and unfolding "output", you can see the full output of the tool.
+      </p>
+
+      <h3>LoAT's Output</h3>
+      <p>
+        If the loop was accelerated successfully, then the end of the output looks, e.g., as follows:
+      </p>
+
+      <p>
+        <tt>
+          0.00/0.12	   Start location: start</br>
+          0.00/0.12	      0: start -> f : [], cost: 0</br>
+          0.00/0.12	      2: f -> f : x'=-n+x, x_1'=n+x_1, x_2'=x_3, x_4'=x_5, [ n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0 ], cost: 1</br>
+          0.00/0.12	EOF
+        </tt>
+      </p>
+
+      <p>
+      The leading <tt>0.00/0.12</tt> is a timestamp which is added by StarExec and can thus be ignored, just as the trailing <tt>EOF</tt>.
+      The accelerated loop is presented in a rule-based formalism, which is equivalent to the formulas that are used in the paper.
+      It is always prefixed by <tt>c: f -> f</tt> where <tt>c</tt> is a natural number.
+      The remainder of the corresponding line above is equivalent to the formula
+      </p>
+      <p>
+        <tt>x'=-n+x && x_1'=n+x_1 && x_2'=x_3 && x_4'=x_5 && n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0</tt>.
+      </p>
+      <p>
+        The costs are irrelevant for our paper and can thus be ignored.
+      </p>
+
+      <h3>Flata's Results</h3>
+      <p>
+        The invocation of Flata was suggested by its developers.
+        Note that Flata sometimes failed with one of the following two errors:
+      <p>
+        <ul>
+          <li><tt>Exception in thread "main" verimag.flata.common.NotPresburger</tt></li>
+          <li><tt>no viable alternative at character '2'</tt></li>
+        </ul>
+      <p>This happens when the loop contains non-linear arithmetic, which is not supported by Flata.</p>
+
+      <h3>Zip-Files with Results</h3>
+      <p>
+        As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of LoAT and Flata.
+      </p>
+      <ul>
+        <li>full version of our acceleration calculus</li>
+        <ul>
+          <li><a href="jobs/calc_info.zip">results</a></li>
+          <li><a href="jobs/calc_output.zip">full output</a></li>
+        </ul>
+        <li><i>acceleration via monotonicity</i></li>
+        <ul>
+          <li><a href="jobs/mon_info.zip">results</a></li>
+          <li><a href="jobs/mon_output.zip">full output</a></li>
+        </ul>
+        <li><i>acceleration via metering functions</i></li>
+        <ul>
+          <li><a href="jobs/meter_info.zip">results</a></li>
+          <li><a href="jobs/meter_output.zip">full output</a></li>
+        </ul>
+        <li>restricted version of our acceleration calculus without <i>acceleration via eventual increase</i></li>
+        <ul>
+          <li><a href="jobs/no_ev_inc_info.zip">results</a></li>
+          <li><a href="jobs/no_ev_inc_output.zip">full output</a></li>
+        </ul>
+        <li>restricted version of our acceleration calculus without <i>acceleration via eventual decrease</i></li>
+        <ul>
+          <li><a href="jobs/no_ev_dec_info.zip">results</a></li>
+          <li><a href="jobs/no_ev_dec_output.zip">full output</a></li>
+        </ul>
+        <li>restricted version of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i></li>
+        <ul>
+          <li><a href="jobs/no_ev_mon_info.zip">results</a></li>
+          <li><a href="jobs/no_ev_mon_output.zip">full output</a></li>
+        </ul>
+        <li>Flata</li>
+        <ul>
+          <li><a href="jobs/flata_info.zip">results</a></li>
+          <li><a href="jobs/flata_output.zip">full output</a></li>
+        </ul>
+      </ul>
+
+      <hr/>
+
+      <h2>LoAT's Input Format</h2>
+
+      <p>
+        LoAT uses the <a href+"http://aprove.informatik.rwth-aachen.de/eval/IntegerComplexity-Journal/">input format of the tool KoAT</a> (file ending .koat).
+        It represents programs as transition systems, using a rule-based formalism. An example for a valid input is:
+      </p>
+
+      <p>
+        <tt>
+          (GOAL COMPLEXITY)<br/>
+          (STARTTERM (FUNCTIONSYMBOLS start))<br/>
+          (VAR x y z)<br/>
+          (RULES<br/>
+          &nbsp;&nbsp;start(x, y, z) -> f(x, y, z)<br/>
+          &nbsp;&nbsp;f(x, y, z) -> f(x-1, y+x, z-y) [x > 0 && y > 0 && z > 0]<br/>
+          )
+        </tt>
+      </p>
+
+      <p>
+        The first line is needed for historical reasons and is meaningless in the context of our paper.
+      </p>
+
+      <p>
+        The second line declares the entry-point of the program. Note that KoAT's input format requires that each program has a unique entry-point without any incoming transitions (i.e., in the example above, a rule where <tt>start</tt> occurs on the
+        right-hand side would be invalid).
+      </p>
+
+      <p>
+        In the third line, the program variables are declared.
+      </p>
+
+      <p>
+        For the purpose of our paper, the <tt>RULES</tt>-section always contains two rules: One of the form
+      </p>
+
+      <p>
+        <tt>
+          start(...) -> f(...),
+        </tt>
+      </p>
+
+      <p>
+      which is needed due to the requirement that the entry-point of the program does not have incoming transitions (see above), and a second rule
+      </p>
+
+      <p>
+        <tt>
+          f(x_1,...,x_d) -> f(t_1,...,t_d) [phi],
+        </tt>
+      </p>
+
+      <p>
+        which represents the loop that should be accelerated. More precisely, it represents the following loop:
+      </p>
+
+      <p>
+        <tt>
+          while (phi)<br/>
+          &nbsp;&nbsp;x_1 := t_1<br/>
+          &nbsp;&nbsp;...<br/>
+          &nbsp;&nbsp;x_d := t_d
+        </tt>
+      </p>
+
+      <hr/>
+
+    </body>
+</html>
