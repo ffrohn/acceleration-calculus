@@ -2,34 +2,45 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-    <title>Empirical Evaluation of: A Calculus for Modular Loop Acceleration</title>
+    <title>Empirical Evaluation of: A Calculus for Modular Loop Acceleration (and Non-Termination Proofs)</title>
     <style>
       table, th, td {border: 1px solid black;}
       td {text-align: center}
     </style>
     <body>
 
-      <h1>Empirical Evaluation of: <a href="https://arxiv.org/abs/2001.01516"><i>A Calculus for Modular Loop Acceleration</i></a></h1>
+      <hr/><hr/>
+
+      <h1>Empirical Evaluation of:
+        <ul>
+          <li><a href="index.html#accel"><i>A Calculus for Modular Loop Acceleration</i></a> and</li>
+          <li><a href="index.html#nonterm"><i>A Calculus for Modular Loop Acceleration and Non-Termination Proofs</i></a></li>
+        </ul>
+      </h1>
+
+      <hr/><hr/>
+
+      <h2 id=accel><a href="https://arxiv.org/abs/2001.01516">A Calculus for Modular Loop Acceleration</a></h2>
 
       <hr/>
 
-      <h2>Artifact Evaluation</h2>
+      <h3>Artifact Evaluation</h3>
 
       <a href="https://doi.org/10.5281/zenodo.3676348">Here</a> you can find the zip-file for the artifact evaluation committee.
 
       <hr/>
 
-      <h2>Downloading LoAT</h2>
+      <h3>Downloading LoAT</h3>
 
       <p>
         We provide a
         <a href="https://github.com/aprove-developers/LoAT/releases/tag/tacas20">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
-        Apart from that, LoAT is open-source and available on <a href="https://github.com/aprove-developers/LoAT/tree/tacas20">Github</a>
+        Apart from that, LoAT is open-source and the source code of the version that was used for our evaluation is available on <a href="https://github.com/aprove-developers/LoAT/tree/tacas20">Github</a>
       </p>
 
       <hr/>
 
-      <h2>Examples</h2>
+      <h3>Examples</h3>
 
       <ul>
         <li><a href="loops.zip">Here</a> you can find the loops that we used for our evaluation.</li>
@@ -39,9 +50,9 @@
 
       <hr/>
 
-      <h2>Evaluation</h2>
+      <h3>Evaluation</h3>
 
-      <h3>StarExec-Jobs</h3>
+      <h4>StarExec-Jobs</h4>
 
       <p>
         Below we provide links to the StarExec-Jobs of our evaluation.
@@ -67,7 +78,7 @@
         In the tables on StarExec, the result "YES" means that the loop in question was accelerated exactly, "MAYBE" means that it was accelerated approximately, and "NO" means that the tool failed to accelerate it. By clicking on one of the examples and unfolding "output", you can see the full output of the tool.
       </p>
 
-      <h3>LoAT's Output</h3>
+      <h4>LoAT's Output</h4>
       <p>
         If the loop was accelerated successfully, then the end of the output looks, e.g., as follows:
       </p>
@@ -94,7 +105,7 @@
         The costs are irrelevant for our paper and can thus be ignored.
       </p>
 
-      <h3>Flata's Results</h3>
+      <h4>Flata's Results</h4>
       <p>
         The invocation of Flata was suggested by its developers.
         Note that Flata sometimes failed with one of the following two errors:
@@ -105,7 +116,7 @@
         </ul>
       <p>This happens when the loop contains non-linear arithmetic, which is not supported by Flata.</p>
 
-      <h3>Zip-Files with Results</h3>
+      <h4>Zip-Files with Results</h4>
       <p>
         As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of LoAT and Flata.
       </p>
@@ -149,7 +160,7 @@
 
       <hr/>
 
-      <h2>LoAT's Input Format</h2>
+      <h4>LoAT's Input Format</h4>
 
       <p>
         LoAT uses the <a href+"http://aprove.informatik.rwth-aachen.de/eval/IntegerComplexity-Journal/">input format of the tool KoAT</a> (file ending .koat).
@@ -213,6 +224,131 @@
           &nbsp;&nbsp;x_d := t_d
         </tt>
       </p>
+
+      <hr/><hr/>
+
+      <h2 id=nonterm><a href="sttt21.pdf">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h2>
+
+      <hr/><hr/>
+
+      <p>
+        For our evaluation of our novel calculus for loop acceleration, see <a href="index.html#accel">above</a>
+      </p>
+
+      <hr/>
+
+      <h3>Downloading LoAT</h3>
+
+      <p>
+        We provide a
+        <a href="https://github.com/aprove-developers/LoAT/releases/tag/sttt21">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
+        Apart from that, LoAT is open-source and the source code of the version that was used for our evaluation is available on <a href="https://github.com/aprove-developers/LoAT/tree/sttt21">Github</a>
+      </p>
+
+      <hr/>
+
+      <h3>Examples</h3>
+
+      <ul>
+        <li><a href="loops_smt.zip">Here</a> you can find the loops that we used for our evaluation.</li>
+        <li><a href="loops_c.zip">Here</a> you can find the loops that we used for our evaluation as <tt>C</tt> programs.</li>
+        <li>TODO <a href="examples_nonterm.zip">Here</a> you can find the examples from our paper.</li>
+      </ul>
+
+      <hr/>
+
+      <h3>Evaluation</h3>
+
+      <h4>Versions of Other Tools</h4>
+
+      <ul>
+        <li>For AProVE, we used a <a href="aprove.jar">custom version provided by its developers</a>.</li>
+        <li>For iRankFinder, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=29509">version from the termination competition 2021</a>.</li>
+        <li>For RevTerm, we used the verion with SHA <tt>45e96f9</tt> from the <a href="https://github.com/ekgma/RevTerm">GitHub repository</a>.</li>
+        <li>For Ultimate, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=33900">version from the termination competition 2021</a>.</li>
+        <li>For VeryMax, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=9339">version from the termination competition 2019</a>.</li>
+      </ul>
+
+      <h4>StarExec-Jobs</h4>
+
+      <p>
+        Below we provide links to the StarExec-Jobs of our evaluation.
+      </p>
+      <ul>
+        <li><a href="httsps://www.starexec.org/starexec/secure/details/job.jsp?id=48377">LoAT</a></li>
+        <ul><li>Invocation: <tt>loat-static --mode recurrent_set $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48371">AProVE</a></li>
+        <ul><li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48677">AProVE non-termination only</a></li>
+        <ul>
+          <li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 -s llvm-nonterm.strategy $INPUT</tt></li>
+          <li>you can find the file <tt>llvm-nonterm.strategy</tt> <a href="llvm-nonterm.strategy">here</a></li>
+        </ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=47922">iRankFinder</a></li>
+        <ul><li>Configuration: <tt>competition</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48156">iRankFinder non-termination only</a></li>
+        <ul><li>Invocation: <tt>irankfinder -nt monotonicrecset -f $INPUT</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48369">RevTerm</a></li>
+        <ul>
+          <li>Invocations:
+            <ul>
+              <li><tt>RevTerm.sh $INPUT -linear part1 mathsat 2 1</tt></li>
+              <li><tt>RevTerm.sh $INPUT -linear part2 mathsat 2 1</tt></li>
+            </ul>
+          </li>
+        </ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48368">Ultimate</a></li>
+        <ul><li>Configuration: <tt>default</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48774">VeryMax</a></li>
+        <ul><li>Configuration: <tt>termcomp19_ITS</tt></li></ul>
+      </ul>
+
+      <h4>Zip-Files with Results</h4>
+      <p>
+        As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of LoAT and Flata.
+      </p>
+      <ul>
+        <li>LoAT</li>
+        <ul>
+          <li><a href="jobs/loat_info.zip">results</a></li>
+          <li><a href="jobs/loat_output.zip">full output</a></li>
+        </ul>
+        <li>AProVE</li>
+        <ul>
+          <li><a href="jobs/aprove_info.zip">results</a></li>
+          <li><a href="jobs/aprove_output.zip">full output</a></li>
+        </ul>
+        <li>AProVE non-termination only</li>
+        <ul>
+          <li><a href="jobs/aprove_nonterm_info.zip">results</a></li>
+          <li><a href="jobs/aprove_nonterm_output.zip">full output</a></li>
+        </ul>
+        <li>iRankFinder</li>
+        <ul>
+          <li><a href="jobs/irankfinder_info.zip">results</a></li>
+          <li><a href="jobs/irankfinder_output.zip">full output</a></li>
+        </ul>
+        <li>iRankFinder non-termination only</li>
+        <ul>
+          <li><a href="jobs/irankfinder_nonterm_info.zip">results</a></li>
+          <li><a href="jobs/irankfinder_nonterm_output.zip">full output</a></li>
+        </ul>
+        <li>RevTerm</li>
+        <ul>
+          <li><a href="jobs/revterm_info.zip">results</a></li>
+          <li><a href="jobs/revterm_output.zip">full output</a></li>
+        </ul>
+        <li>Ultimate</li>
+        <ul>
+          <li><a href="jobs/ultimate_info.zip">results</a></li>
+          <li><a href="jobs/ultimate_output.zip">full output</a></li>
+        </ul>
+        <li>VeryMax</li>
+        <ul>
+          <li><a href="jobs/verymax_info.zip">results</a></li>
+          <li><a href="jobs/verymax_output.zip">full output</a></li>
+        </ul>
+      </ul>
 
       <hr/>
 
