@@ -56,20 +56,20 @@
         Below we provide links to the StarExec-Jobs of our evaluation.
       </p>
       <ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37260">full version</a> of our acceleration calculus</li>
-        <ul><li>Invocation: <tt>loat-static $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37267"><i>acceleration via monotonicity</i></a></li>
-        <ul><li>Invocation: <tt>loat-static --acceleration mon $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37266"><i>acceleration via metering functions</i></a></li>
-        <ul><li>Invocation: <tt>loat-static --acceleration meter $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37264">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i></li>
-        <ul><li>Invocation: <tt>loat-static --acceleration no-ev-inc $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37263">restricted version</a> of our acceleration calculus without <i>acceleration via eventual decrease</i></li>
-        <ul><li>Invocation: <tt>loat-static --acceleration no-ev-dec $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37268">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i></li>
-        <ul><li>Invocation: <tt>loat-static --acceleration no-ev-mon $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37742">Flata</a></li>
-        <ul><li>Invocation: <tt>java -cp flata.jar:antlr-3.3-complete.jar:nts.jar verimag.main.Calculator input.rel -noGLPK</tt></li></ul>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37260">full version</a> of our acceleration calculus
+          <ul><li>Invocation: <tt>loat-static $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37267"><i>acceleration via monotonicity</i></a>
+          <ul><li>Invocation: <tt>loat-static --acceleration mon $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37266"><i>acceleration via metering functions</i></a>
+          <ul><li>Invocation: <tt>loat-static --acceleration meter $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37264">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i>
+          <ul><li>Invocation: <tt>loat-static --acceleration no-ev-inc $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37263">restricted version</a> of our acceleration calculus without <i>acceleration via eventual decrease</i>
+          <ul><li>Invocation: <tt>loat-static --acceleration no-ev-dec $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37268">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i>
+          <ul><li>Invocation: <tt>loat-static --acceleration no-ev-mon $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37742">Flata</a>
+          <ul><li>Invocation: <tt>java -cp flata.jar:antlr-3.3-complete.jar:nts.jar verimag.main.Calculator input.rel -noGLPK</tt></li></ul></li>
       </ul>
 
       <p>
@@ -83,9 +83,9 @@
 
       <p>
         <tt>
-          0.00/0.12	   Start location: start</br>
-          0.00/0.12	      0: start -> f : [], cost: 0</br>
-          0.00/0.12	      2: f -> f : x'=-n+x, x_1'=n+x_1, x_2'=x_3, x_4'=x_5, [ n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0 ], cost: 1</br>
+          0.00/0.12	   Start location: start<br/>
+          0.00/0.12	      0: start -> f : [], cost: 0<br/>
+          0.00/0.12	      2: f -> f : x'=-n+x, x_1'=n+x_1, x_2'=x_3, x_4'=x_5, [ n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0 ], cost: 1<br/>
           0.00/0.12	EOF
         </tt>
       </p>
@@ -119,41 +119,48 @@
         As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of LoAT and Flata.
       </p>
       <ul>
-        <li>full version of our acceleration calculus</li>
+        <li>full version of our acceleration calculus
         <ul>
           <li><a href="jobs/calc_info.zip">results</a></li>
           <li><a href="jobs/calc_output.zip">full output</a></li>
         </ul>
-        <li><i>acceleration via monotonicity</i></li>
+        </li>
+        <li><i>acceleration via monotonicity</i>
         <ul>
           <li><a href="jobs/mon_info.zip">results</a></li>
           <li><a href="jobs/mon_output.zip">full output</a></li>
         </ul>
-        <li><i>acceleration via metering functions</i></li>
+        </li>
+        <li><i>acceleration via metering functions</i>
         <ul>
           <li><a href="jobs/meter_info.zip">results</a></li>
           <li><a href="jobs/meter_output.zip">full output</a></li>
         </ul>
-        <li>restricted version of our acceleration calculus without <i>acceleration via eventual increase</i></li>
+        </li>
+        <li>restricted version of our acceleration calculus without <i>acceleration via eventual increase</i>
         <ul>
           <li><a href="jobs/no_ev_inc_info.zip">results</a></li>
           <li><a href="jobs/no_ev_inc_output.zip">full output</a></li>
         </ul>
-        <li>restricted version of our acceleration calculus without <i>acceleration via eventual decrease</i></li>
+        </li>
+        <li>restricted version of our acceleration calculus without <i>acceleration via eventual decrease</i>
         <ul>
           <li><a href="jobs/no_ev_dec_info.zip">results</a></li>
           <li><a href="jobs/no_ev_dec_output.zip">full output</a></li>
         </ul>
-        <li>restricted version of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i></li>
+        </li>
+        <li>restricted version of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i>
         <ul>
           <li><a href="jobs/no_ev_mon_info.zip">results</a></li>
           <li><a href="jobs/no_ev_mon_output.zip">full output</a></li>
         </ul>
-        <li>Flata</li>
+        </li>
+        <li>Flata
         <ul>
           <li><a href="jobs/flata_info.zip">results</a></li>
           <li><a href="jobs/flata_output.zip">full output</a></li>
         </ul>
+        </li>
       </ul>
 
       <hr/>
@@ -161,7 +168,7 @@
       <h4>LoAT's Input Format</h4>
 
       <p>
-        LoAT uses the <a href+"http://aprove.informatik.rwth-aachen.de/eval/IntegerComplexity-Journal/">input format of the tool KoAT</a> (file ending .koat).
+        LoAT uses the <a href="http://aprove.informatik.rwth-aachen.de/eval/IntegerComplexity-Journal/">input format of the tool KoAT</a> (file ending .koat).
         It represents programs as transition systems, using a rule-based formalism. An example for a valid input is:
       </p>
 
@@ -279,20 +286,21 @@
         Below we provide links to the StarExec-Jobs of our evaluation.
       </p>
       <ul>
-        <li><a href="httsps://www.starexec.org/starexec/secure/details/job.jsp?id=48377">LoAT</a></li>
-        <ul><li>Invocation: <tt>loat-static --mode recurrent_set $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48371">AProVE</a></li>
-        <ul><li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48677">AProVE non-termination only</a></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48377">LoAT</a>
+          <ul><li>Invocation: <tt>loat-static --mode recurrent_set $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48371">AProVE</a>
+          <ul><li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48677">AProVE non-termination only</a>
         <ul>
           <li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 -s llvm-nonterm.strategy $INPUT</tt></li>
           <li>you can find the file <tt>llvm-nonterm.strategy</tt> <a href="llvm-nonterm.strategy">here</a></li>
         </ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=47922">iRankFinder</a></li>
-        <ul><li>Configuration: <tt>competition</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48156">iRankFinder non-termination only</a></li>
-        <ul><li>Invocation: <tt>irankfinder -nt monotonicrecset -f $INPUT</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48369">RevTerm</a></li>
+        </li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=47922">iRankFinder</a>
+          <ul><li>Configuration: <tt>competition</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48156">iRankFinder non-termination only</a>
+          <ul><li>Invocation: <tt>irankfinder -nt monotonicrecset -f $INPUT</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48369">RevTerm</a>
         <ul>
           <li>Invocations:
             <ul>
@@ -301,10 +309,11 @@
             </ul>
           </li>
         </ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48368">Ultimate</a></li>
-        <ul><li>Configuration: <tt>default</tt></li></ul>
-        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48774">VeryMax</a></li>
-        <ul><li>Configuration: <tt>termcomp19_ITS</tt></li></ul>
+        </li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48368">Ultimate</a>
+          <ul><li>Configuration: <tt>default</tt></li></ul></li>
+        <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48774">VeryMax</a>
+          <ul><li>Configuration: <tt>termcomp19_ITS</tt></li></ul></li>
       </ul>
 
       <h5>Zip-Files with Results</h5>
@@ -312,47 +321,55 @@
         As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of all tools.
       </p>
       <ul>
-        <li>LoAT</li>
+        <li>LoAT
         <ul>
           <li><a href="jobs/loat_info.zip">results</a></li>
           <li><a href="jobs/loat_output.zip">full output</a></li>
         </ul>
-        <li>AProVE</li>
+        </li>
+        <li>AProVE
         <ul>
           <li><a href="jobs/aprove_info.zip">results</a></li>
           <li><a href="jobs/aprove_output.zip">full output</a></li>
         </ul>
-        <li>AProVE non-termination only</li>
+        </li>
+        <li>AProVE non-termination only
         <ul>
           <li><a href="jobs/aprove_nonterm_info.zip">results</a></li>
           <li><a href="jobs/aprove_nonterm_output_part_1.zip">full output -- part 1</a></li>
           <li><a href="jobs/aprove_nonterm_output_part_2.zip">full output -- part 2</a></li>
         </ul>
-        <li>iRankFinder</li>
+        </li>
+        <li>iRankFinder
         <ul>
           <li><a href="jobs/irankfinder_info.zip">results</a></li>
           <li><a href="jobs/irankfinder_output.zip">full output</a></li>
         </ul>
-        <li>iRankFinder non-termination only</li>
+        </li>
+        <li>iRankFinder non-termination only
         <ul>
           <li><a href="jobs/irankfinder_nonterm_info.zip">results</a></li>
           <li><a href="jobs/irankfinder_nonterm_output.zip">full output</a></li>
         </ul>
-        <li>RevTerm</li>
+        </li>
+        <li>RevTerm
         <ul>
           <li><a href="jobs/revterm_info.zip">results</a></li>
           <li><a href="jobs/revterm_output.zip">full output</a></li>
         </ul>
-        <li>Ultimate</li>
+        </li>
+        <li>Ultimate
         <ul>
           <li><a href="jobs/ultimate_info.zip">results</a></li>
           <li><a href="jobs/ultimate_output.zip">full output</a></li>
         </ul>
-        <li>VeryMax</li>
+        </li>
+        <li>VeryMax
         <ul>
           <li><a href="jobs/verymax_info.zip">results</a></li>
           <li><a href="jobs/verymax_output.zip">full output</a></li>
         </ul>
+        </li>
       </ul>
 
       <hr/>
