@@ -57,19 +57,19 @@
       </p>
       <ul>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37260">full version</a> of our acceleration calculus
-          <ul><li>Invocation: <tt>loat-static $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37267"><i>acceleration via monotonicity</i></a>
-          <ul><li>Invocation: <tt>loat-static --acceleration mon $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static --acceleration mon $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37266"><i>acceleration via metering functions</i></a>
-          <ul><li>Invocation: <tt>loat-static --acceleration meter $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static --acceleration meter $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37264">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i>
-          <ul><li>Invocation: <tt>loat-static --acceleration no-ev-inc $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static --acceleration no-ev-inc $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37263">restricted version</a> of our acceleration calculus without <i>acceleration via eventual decrease</i>
-          <ul><li>Invocation: <tt>loat-static --acceleration no-ev-dec $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static --acceleration no-ev-dec $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37268">restricted version</a> of our acceleration calculus without <i>acceleration via eventual increase</i> and without <i>acceleration via eventual decrease</i>
-          <ul><li>Invocation: <tt>loat-static --acceleration no-ev-mon $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static --acceleration no-ev-mon $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=37742">Flata</a>
-          <ul><li>Invocation: <tt>java -cp flata.jar:antlr-3.3-complete.jar:nts.jar verimag.main.Calculator input.rel -noGLPK</tt></li></ul></li>
+          <ul><li>Invocation: <code>java -cp flata.jar:antlr-3.3-complete.jar:nts.jar verimag.main.Calculator input.rel -noGLPK</code></li></ul></li>
       </ul>
 
       <p>
@@ -82,22 +82,22 @@
       </p>
 
       <p>
-        <tt>
+        <code>
           0.00/0.12	   Start location: start<br/>
           0.00/0.12	      0: start -> f : [], cost: 0<br/>
           0.00/0.12	      2: f -> f : x'=-n+x, x_1'=n+x_1, x_2'=x_3, x_4'=x_5, [ n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0 ], cost: 1<br/>
           0.00/0.12	EOF
-        </tt>
+        </code>
       </p>
 
       <p>
-      The leading <tt>0.00/0.12</tt> is a timestamp which is added by StarExec and can thus be ignored, just as the trailing <tt>EOF</tt>.
+      The leading <code>0.00/0.12</code> is a timestamp which is added by StarExec and can thus be ignored, just as the trailing <code>EOF</code>.
       The accelerated loop is presented in a rule-based formalism, which is equivalent to the formulas that are used in the paper.
-      It is always prefixed by <tt>c: f -> f</tt> where <tt>c</tt> is a natural number.
+      It is always prefixed by <code>c: f -> f</code> where <code>c</code> is a natural number.
       The remainder of the corresponding line above is equivalent to the formula
       </p>
       <p>
-        <tt>x'=-n+x && x_1'=n+x_1 && x_2'=x_3 && x_4'=x_5 && n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0</tt>.
+        <code>x'=-n+x && x_1'=n+x_1 && x_2'=x_3 && x_4'=x_5 && n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0</code>.
       </p>
       <p>
         The costs are irrelevant for our paper and can thus be ignored.
@@ -109,8 +109,8 @@
         Note that Flata sometimes failed with one of the following two errors:
       <p>
         <ul>
-          <li><tt>Exception in thread "main" verimag.flata.common.NotPresburger</tt></li>
-          <li><tt>no viable alternative at character '2'</tt></li>
+          <li><code>Exception in thread "main" verimag.flata.common.NotPresburger</code></li>
+          <li><code>no viable alternative at character '2'</code></li>
         </ul>
       <p>This happens when the loop contains non-linear arithmetic, which is not supported by Flata.</p>
 
@@ -173,7 +173,7 @@
       </p>
 
       <p>
-        <tt>
+        <code>
           (GOAL COMPLEXITY)<br/>
           (STARTTERM (FUNCTIONSYMBOLS start))<br/>
           (VAR x y z)<br/>
@@ -181,7 +181,7 @@
           &nbsp;&nbsp;start(x, y, z) -> f(x, y, z)<br/>
           &nbsp;&nbsp;f(x, y, z) -> f(x-1, y+x, z-y) [x > 0 && y > 0 && z > 0]<br/>
           )
-        </tt>
+        </code>
       </p>
 
       <p>
@@ -189,7 +189,7 @@
       </p>
 
       <p>
-        The second line declares the entry-point of the program. Note that KoAT's input format requires that each program has a unique entry-point without any incoming transitions (i.e., in the example above, a rule where <tt>start</tt> occurs on the
+        The second line declares the entry-point of the program. Note that KoAT's input format requires that each program has a unique entry-point without any incoming transitions (i.e., in the example above, a rule where <code>start</code> occurs on the
         right-hand side would be invalid).
       </p>
 
@@ -198,13 +198,13 @@
       </p>
 
       <p>
-        For the purpose of our paper, the <tt>RULES</tt>-section always contains two rules: One of the form
+        For the purpose of our paper, the <code>RULES</code>-section always contains two rules: One of the form
       </p>
 
       <p>
-        <tt>
+        <code>
           start(...) -> f(...),
-        </tt>
+        </code>
       </p>
 
       <p>
@@ -212,9 +212,9 @@
       </p>
 
       <p>
-        <tt>
+        <code>
           f(x_1,...,x_d) -> f(t_1,...,t_d) [phi],
-        </tt>
+        </code>
       </p>
 
       <p>
@@ -222,12 +222,12 @@
       </p>
 
       <p>
-        <tt>
+        <code>
           while (phi)<br/>
           &nbsp;&nbsp;x_1 := t_1<br/>
           &nbsp;&nbsp;...<br/>
           &nbsp;&nbsp;x_d := t_d
-        </tt>
+        </code>
       </p>
 
       <hr/><hr/>
@@ -262,7 +262,7 @@
 
       <ul>
         <li><a href="loops_smt.zip">Here</a> you can find the loops that we used for our evaluation.</li>
-        <li><a href="loops_c.zip">Here</a> you can find the loops that we used for our evaluation as <tt>C</tt> programs.</li>
+        <li><a href="loops_c.zip">Here</a> you can find the loops that we used for our evaluation as <code>C</code> programs.</li>
         <li><a href="examples_nonterm.zip">Here</a> you can find the examples from our paper.</li>
       </ul>
 
@@ -275,7 +275,7 @@
       <ul>
         <li>For AProVE, we used a <a href="aprove.jar">custom version provided by its developers</a>.</li>
         <li>For iRankFinder, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=29509">version from the termination competition 2021</a>.</li>
-        <li>For RevTerm, we used the version with SHA <tt>45e96f9</tt> from the <a href="https://github.com/ekgma/RevTerm">GitHub repository</a>.</li>
+        <li>For RevTerm, we used the version with SHA <code>45e96f9</code> from the <a href="https://github.com/ekgma/RevTerm">GitHub repository</a>.</li>
         <li>For Ultimate, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=33900">version from the termination competition 2021</a>.</li>
         <li>For VeryMax, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=9339">version from the termination competition 2019</a>.</li>
       </ul>
@@ -287,33 +287,33 @@
       </p>
       <ul>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48377">LoAT</a>
-          <ul><li>Invocation: <tt>loat-static --mode recurrent_set $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>loat-static --mode recurrent_set $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48371">AProVE</a>
-          <ul><li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48677">AProVE non-termination only</a>
         <ul>
-          <li>Invocation: <tt>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 -s llvm-nonterm.strategy $INPUT</tt></li>
-          <li>you can find the file <tt>llvm-nonterm.strategy</tt> <a href="llvm-nonterm.strategy">here</a></li>
+          <li>Invocation: <code>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 -s llvm-nonterm.strategy $INPUT</code></li>
+          <li>you can find the file <code>llvm-nonterm.strategy</code> <a href="llvm-nonterm.strategy">here</a></li>
         </ul>
         </li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=47922">iRankFinder</a>
-          <ul><li>Configuration: <tt>competition</tt></li></ul></li>
+          <ul><li>Configuration: <code>competition</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48156">iRankFinder non-termination only</a>
-          <ul><li>Invocation: <tt>irankfinder -nt monotonicrecset -f $INPUT</tt></li></ul></li>
+          <ul><li>Invocation: <code>irankfinder -nt monotonicrecset -f $INPUT</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48369">RevTerm</a>
         <ul>
           <li>Invocations:
             <ul>
-              <li><tt>RevTerm.sh $INPUT -linear part1 mathsat 2 1</tt></li>
-              <li><tt>RevTerm.sh $INPUT -linear part2 mathsat 2 1</tt></li>
+              <li><code>RevTerm.sh $INPUT -linear part1 mathsat 2 1</code></li>
+              <li><code>RevTerm.sh $INPUT -linear part2 mathsat 2 1</code></li>
             </ul>
           </li>
         </ul>
         </li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48368">Ultimate</a>
-          <ul><li>Configuration: <tt>default</tt></li></ul></li>
+          <ul><li>Configuration: <code>default</code></li></ul></li>
         <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48774">VeryMax</a>
-          <ul><li>Configuration: <tt>termcomp19_ITS</tt></li></ul></li>
+          <ul><li>Configuration: <code>termcomp19_ITS</code></li></ul></li>
       </ul>
 
       <h5>Zip-Files with Results</h5>
