@@ -85,7 +85,7 @@
         <code>
           0.00/0.12	   Start location: start<br/>
           0.00/0.12	      0: start -> f : [], cost: 0<br/>
-          0.00/0.12	      2: f -> f : x'=-n+x, x_1'=n+x_1, x_2'=x_3, x_4'=x_5, [ n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0 ], cost: 1<br/>
+          0.00/0.12	      2: f -> f : x'=-n+x, x_1'=n+x_1, x_2'=x_3, x_4'=x_5, [ n>0 &amp;&amp; 1+x_1>0 &amp;&amp; x_3>0 &amp;&amp; x_2>0 &amp;&amp; 1-n+x>0 &amp;&amp; -1+x_4>0 &amp;&amp; -1+x_5>0 ], cost: 1<br/>
           0.00/0.12	EOF
         </code>
       </p>
@@ -97,7 +97,7 @@
       The remainder of the corresponding line above is equivalent to the formula
       </p>
       <p>
-        <code>x'=-n+x && x_1'=n+x_1 && x_2'=x_3 && x_4'=x_5 && n>0 && 1+x_1>0 && x_3>0 && x_2>0 && 1-n+x>0 && -1+x_4>0 && -1+x_5>0</code>.
+        <code>x'=-n+x &amp;&amp; x_1'=n+x_1 &amp;&amp; x_2'=x_3 &amp;&amp; x_4'=x_5 &amp;&amp; n>0 &amp;&amp; 1+x_1>0 &amp;&amp; x_3>0 &amp;&amp; x_2>0 &amp;&amp; 1-n+x>0 &amp;&amp; -1+x_4>0 &amp;&amp; -1+x_5>0</code>.
       </p>
       <p>
         The costs are irrelevant for our paper and can thus be ignored.
@@ -179,7 +179,7 @@
           (VAR x y z)<br/>
           (RULES<br/>
           &nbsp;&nbsp;start(x, y, z) -> f(x, y, z)<br/>
-          &nbsp;&nbsp;f(x, y, z) -> f(x-1, y+x, z-y) [x > 0 && y > 0 && z > 0]<br/>
+          &nbsp;&nbsp;f(x, y, z) -> f(x-1, y+x, z-y) [x > 0 &amp;&amp; y > 0 &amp;&amp; z > 0]<br/>
           )
         </code>
       </p>
