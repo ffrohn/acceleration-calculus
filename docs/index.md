@@ -157,13 +157,13 @@
 
     Below we provide tables with the detailed results of our benchmarks:
     <ul>
-      <li><a href="./nonterm/loat.html">LoAT</a></li>
-      <li><a href="./nonterm/monot.html"><i>acceleration via monotonicity</i></a></li>
-      <li><a href="./nonterm/meter.html"><i>acceleration via metering functions</i></a></li>
-      <li><a href="./nonterm/flata.html">Flata</a></li>
-      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>acceleration via eventual increase</i></a></li>
-      <li><a href="./nonterm/loat_no_ev_dec.html">LoAT without <i>acceleration via eventual decrease</i></a></li>
-      <li><a href="./nonterm/loat_no_ev_mon.html">LoAT without <i>acceleration via eventual increase</i> and <i>acceleration via eventual decrease</i></a></li>
+      <li><a href="./accel/loat.html">LoAT</a></li>
+      <li><a href="./accel/monot.html"><i>acceleration via monotonicity</i></a></li>
+      <li><a href="./accel/meter.html"><i>acceleration via metering functions</i></a></li>
+      <li><a href="./accel/flata.html">Flata</a></li>
+      <li><a href="./accel/loat_no_ev_inc.html">LoAT without <i>acceleration via eventual increase</i></a></li>
+      <li><a href="./accel/loat_no_ev_dec.html">LoAT without <i>acceleration via eventual decrease</i></a></li>
+      <li><a href="./accel/loat_no_ev_mon.html">LoAT without <i>acceleration via eventual increase</i> and <i>acceleration via eventual decrease</i></a></li>
     </ul>
 
     <h3>LoAT's Input Format</h3>
