@@ -1,9 +1,7 @@
 title: <img src="./logo.svg" alt="LoAT">
 email: florian.frohn@cs.rwth-aachen.de
 description: >- # this means to ignore newlines until "baseurl:"
-  We present the new version of the Loop Acceleration Tool (LoAT), a
-  powerful tool for proving non-termination and worst-case lower bounds for programs
-  operating on integers.
+  We present a novel calculus that allows for combining loop acceleration and non-termination techniques for loops operating on integers in a modular way.
 github_username:  ffrohn
 theme: jekyll-theme-cayman
 github:
