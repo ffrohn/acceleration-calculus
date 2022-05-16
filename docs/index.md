@@ -153,6 +153,19 @@
       </li>
     </ul>
 
+    <h3>Results</h3>
+
+    Below we provide tables with the detailed results of our benchmarks:
+    <ul>
+      <li><a href="./nonterm/loat.html">LoAT</a></li>
+      <li><a href="./nonterm/monot.html"><i>acceleration via monotonicity</i></a></li>
+      <li><a href="./nonterm/meter.html"><i>acceleration via metering functions</i></a></li>
+      <li><a href="./nonterm/flata.html">Flata</a></li>
+      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>acceleration via eventual increase</i></a></li>
+      <li><a href="./nonterm/loat_no_ev_dec.html">LoAT without <i>acceleration via eventual decrease</i></a></li>
+      <li><a href="./nonterm/loat_no_ev_mon.html">LoAT without <i>acceleration via eventual increase</i> and <i>acceleration via eventual decrease</i></a></li>
+    </ul>
+
     <h3>LoAT's Input Format</h3>
 
     <p>
@@ -220,15 +233,12 @@
 
     <h1 id="nonterm"><a href="sttt21.pdf">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
 
-    <h2>Loop Acceleration</h2>
-
     <p>
       For our evaluation of our novel calculus for loop acceleration, see <a href="index.html#accel">above</a>.
+      In the following, we provide information about the evaluation of our novel calculus for proving non-termination.
     </p>
 
-    <h2>Non-Termination</h2>
-
-    <h3>Downloading LoAT</h3>
+    <h2>Downloading LoAT</h2>
 
     <p>
       We provide a
@@ -237,7 +247,7 @@
     </p>
 
 
-    <h3>Examples</h3>
+    <h2>Examples</h2>
 
     <ul>
       <li><a href="loops_smt.zip">Here</a> you can find the loops that we used for our evaluation.</li>
@@ -255,9 +265,9 @@
       <li><code>1567523039443195.koat</code></li>
     </ul>
 
-    <h3>Evaluation</h3>
+    <h2>Evaluation</h2>
 
-    <h4>Versions of Other Tools</h4>
+    <h3>Versions of Other Tools</h3>
 
     <ul>
       <li>For AProVE, we used a <a href="aprove.jar">custom version provided by its developers</a>.</li>
@@ -267,7 +277,7 @@
       <li>For VeryMax, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=9339">version from the termination competition 2019</a>.</li>
     </ul>
 
-    <h4>StarExec-Jobs</h4>
+    <h3>StarExec-Jobs</h3>
 
     <p>
       Below we provide links to the StarExec-Jobs of our evaluation.
@@ -303,7 +313,7 @@
         <ul><li>Configuration: <code>termcomp19_ITS</code></li></ul></li>
     </ul>
 
-    <h4>Zip-Files with Results</h4>
+    <h3>Zip-Files with Results</h3>
     <p>
       As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of all tools.
     </p>
@@ -359,7 +369,7 @@
       </li>
     </ul>
 
-    <h4>Results</h4>
+    <h3>Results</h3>
 
     Below we provide tables with the detailed results of our benchmarks:
     <ul>
