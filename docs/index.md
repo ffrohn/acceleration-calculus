@@ -359,5 +359,20 @@
       </li>
     </ul>
 
+    <h4>Results</h4>
+
+    Below we provide tables with the detailed results of our benchmarks:
+    <ul>
+      <li><a href="./nonterm/loat.html">LoAT</a></li>
+      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>non-termination via eventual increase</i></a></li>
+      <li><a href="./nonterm/aprove.html">AProVE</a></li>
+      <li><a href="./nonterm/aprove_nt.html">AProVE NT</a></li>
+      <li><a href="./nonterm/irankfinder.html">iRankFinder</a></li>
+      <li><a href="./nonterm/irankfinder_nt.html">iRankFinder NT</a></li>
+      <li><a href="./nonterm/revterm.html">RevTerm</a></li>
+      <li><a href="./nonterm/ultimate.html">Ultimate</a></li>
+      <li><a href="./nonterm/verymax.html">VeryMax</a></li>
+    </ul>
+
   </body>
 </html>
