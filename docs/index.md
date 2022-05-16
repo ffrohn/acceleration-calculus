@@ -153,7 +153,7 @@
       </li>
     </ul>
 
-    <h3>Results</h3>
+    <h3>Detailed Results</h3>
 
     Below we provide tables with the detailed results of our benchmarks:
     <ul>
@@ -369,7 +369,7 @@
       </li>
     </ul>
 
-    <h3>Results</h3>
+    <h3>Detailed Results</h3>
 
     Below we provide tables with the detailed results of our benchmarks:
     <ul>
