@@ -9,26 +9,20 @@
   </head>
   <body>
 
-    <h1>Empirical Evaluation of:
-      <ul>
-        <li><a href="index.html#accel"><i>A Calculus for Modular Loop Acceleration</i></a> and</li>
-        <li><a href="index.html#nonterm"><i>A Calculus for Modular Loop Acceleration and Non-Termination Proofs</i></a></li>
-      </ul>
-    </h1>
+    <p>
+      This is the empirical evaluation of the papers <a href="index.html#accel"><i>A Calculus for Modular Loop Acceleration</i></a> and <a href="index.html#nonterm"><i>A Calculus for Modular Loop Acceleration and Non-Termination Proofs</i></a>.
+      You can find the source code for our tool LoAT at <a href="https://github.com/aprove-developers/LoAT/tree/acceleration-journal">GitHub</a>.
+    </p>
 
-    <hr/><hr/>
+    <p>Moreover, we refer to the <a href="https://aprove-developers.github.io/LoAT/">general LoAT website</a> for further information.</p>
 
-    <h2 id=accel><a href="https://arxiv.org/abs/2001.01516">A Calculus for Modular Loop Acceleration</a></h2>
+    <h1 id=accel><a href="https://arxiv.org/abs/2001.01516">A Calculus for Modular Loop Acceleration</a></h1>
 
-    <hr/><hr/>
-
-    <h3>Artifact Evaluation</h3>
+    <h2>Artifact Evaluation</h2>
 
     <a href="https://doi.org/10.5281/zenodo.3676348">Here</a> you can find the zip-file for the artifact evaluation committee.
 
-    <hr/>
-
-    <h3>Downloading LoAT</h3>
+    <h2>Downloading LoAT</h2>
 
     <p>
       We provide a
@@ -36,9 +30,7 @@
       Apart from that, LoAT is open-source and the source code of the version that was used for our evaluation is available on <a href="https://github.com/aprove-developers/LoAT/tree/tacas20">Github</a>.
     </p>
 
-    <hr/>
-
-    <h3>Examples</h3>
+    <h2>Examples</h2>
 
     <ul>
       <li><a href="loops.zip">Here</a> you can find the loops that we used for our evaluation.</li>
@@ -46,11 +38,9 @@
       <li><a href="examples.zip">Here</a> you can find the examples from our paper.</li>
     </ul>
 
-    <hr/>
+    <h2>Evaluation</h2>
 
-    <h3>Evaluation</h3>
-
-    <h4>StarExec-Jobs</h4>
+    <h3>StarExec-Jobs</h3>
 
     <p>
       Below we provide links to the StarExec-Jobs of our evaluation.
@@ -76,7 +66,7 @@
       In the tables on StarExec, the result "YES" means that the loop in question was accelerated exactly, "MAYBE" means that it was accelerated approximately, and "NO" means that the tool failed to accelerate it. By clicking on one of the examples and unfolding "output", you can see the full output of the tool.
     </p>
 
-    <h4>LoAT's Output</h4>
+    <h3>LoAT's Output</h3>
     <p>
       If the loop was accelerated successfully, then the end of the output looks, e.g., as follows:
     </p>
@@ -103,7 +93,7 @@
       The costs are irrelevant for our paper and can thus be ignored.
     </p>
 
-    <h4>Flata's Results</h4>
+    <h3>Flata's Results</h3>
     <p>
       The invocation of Flata was suggested by its developers.
       Note that Flata sometimes failed with one of the following two errors:
@@ -114,7 +104,7 @@
       </ul>
     <p>This happens when the loop contains non-linear arithmetic, which is not supported by Flata.</p>
 
-    <h4>Zip-Files with Results</h4>
+    <h3>Zip-Files with Results</h3>
     <p>
       As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of LoAT and Flata.
     </p>
@@ -163,9 +153,7 @@
       </li>
     </ul>
 
-    <hr/>
-
-    <h4>LoAT's Input Format</h4>
+    <h3>LoAT's Input Format</h3>
 
     <p>
       LoAT uses the <a href="http://aprove.informatik.rwth-aachen.de/eval/IntegerComplexity-Journal/">input format of the tool KoAT</a> (file ending .koat).
@@ -230,25 +218,17 @@
       </code>
     </p>
 
-    <hr/><hr/>
+    <h1 id=nonterm><a href="sttt21.pdf">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
 
-    <h2 id=nonterm><a href="sttt21.pdf">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h2>
-
-    <hr/><hr/>
-
-    <h3>Loop Acceleration</h3>
+    <h2>Loop Acceleration</h2>
 
     <p>
       For our evaluation of our novel calculus for loop acceleration, see <a href="index.html#accel">above</a>.
     </p>
 
-    <hr/>
+    <h2>Non-Termination</h2>
 
-    <h3>Non-Termination</h3>
-
-    <hr/>
-
-    <h4>Downloading LoAT</h4>
+    <h3>Downloading LoAT</h3>
 
     <p>
       We provide a
@@ -256,9 +236,8 @@
       Apart from that, LoAT is open-source and the source code of the version that was used for our evaluation is available on <a href="https://github.com/aprove-developers/LoAT/tree/sttt21">Github</a>.
     </p>
 
-    <hr/>
 
-    <h4>Examples</h4>
+    <h3>Examples</h3>
 
     <ul>
       <li><a href="loops_smt.zip">Here</a> you can find the loops that we used for our evaluation.</li>
@@ -276,11 +255,9 @@
       </ul>
     </p>
 
-    <hr/>
+    <h3>Evaluation</h3>
 
-    <h4>Evaluation</h4>
-
-    <h5>Versions of Other Tools</h5>
+    <h4>Versions of Other Tools</h4>
 
     <ul>
       <li>For AProVE, we used a <a href="aprove.jar">custom version provided by its developers</a>.</li>
@@ -290,7 +267,7 @@
       <li>For VeryMax, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=9339">version from the termination competition 2019</a>.</li>
     </ul>
 
-    <h5>StarExec-Jobs</h5>
+    <h4>StarExec-Jobs</h4>
 
     <p>
       Below we provide links to the StarExec-Jobs of our evaluation.
@@ -326,7 +303,7 @@
         <ul><li>Configuration: <code>termcomp19_ITS</code></li></ul></li>
     </ul>
 
-    <h5>Zip-Files with Results</h5>
+    <h4>Zip-Files with Results</h4>
     <p>
       As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of all tools.
     </p>
@@ -381,8 +358,6 @@
         </ul>
       </li>
     </ul>
-
-    <hr/>
 
   </body>
 </html>
