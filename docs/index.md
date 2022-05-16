@@ -11,12 +11,12 @@
 
     <p>
       This is the empirical evaluation of the papers <a href="index.html#accel"><i>A Calculus for Modular Loop Acceleration</i></a> and <a href="index.html#nonterm"><i>A Calculus for Modular Loop Acceleration and Non-Termination Proofs</i></a>.
-      You can find the source code for our tool LoAT at <a href="https://github.com/aprove-developers/LoAT/tree/acceleration-journal">GitHub</a>.
+      You can find the source code for our tool LoAT at <a href="https://github.com/aprove-developers/LoAT">GitHub</a>.
     </p>
 
     <p>Moreover, we refer to the <a href="https://aprove-developers.github.io/LoAT/">general LoAT website</a> for further information.</p>
 
-    <h1 id=accel><a href="https://arxiv.org/abs/2001.01516">A Calculus for Modular Loop Acceleration</a></h1>
+    <h1 id="accel"><a href="https://arxiv.org/abs/2001.01516">A Calculus for Modular Loop Acceleration</a></h1>
 
     <h2>Artifact Evaluation</h2>
 
@@ -97,11 +97,11 @@
     <p>
       The invocation of Flata was suggested by its developers.
       Note that Flata sometimes failed with one of the following two errors:
-    <p>
-      <ul>
-        <li><code>Exception in thread "main" verimag.flata.common.NotPresburger</code></li>
-        <li><code>no viable alternative at character '2'</code></li>
-      </ul>
+    </p>
+    <ul>
+      <li><code>Exception in thread "main" verimag.flata.common.NotPresburger</code></li>
+      <li><code>no viable alternative at character '2'</code></li>
+    </ul>
     <p>This happens when the loop contains non-linear arithmetic, which is not supported by Flata.</p>
 
     <h3>Zip-Files with Results</h3>
@@ -218,7 +218,7 @@
       </code>
     </p>
 
-    <h1 id=nonterm><a href="sttt21.pdf">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
+    <h1 id="nonterm"><a href="sttt21.pdf">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
 
     <h2>Loop Acceleration</h2>
 
@@ -247,13 +247,13 @@
 
     <p>
       The examples that could not be solved by any tool in our evaluation are:
-      <ul>
-        <li><code>1567523084804575.koat</code></li>
-        <li><code>1567523106272845.koat</code></li>
-        <li><code>1567523084803520.koat</code></li>
-        <li><code>1567523039443195.koat</code></li>
-      </ul>
     </p>
+    <ul>
+      <li><code>1567523084804575.koat</code></li>
+      <li><code>1567523106272845.koat</code></li>
+      <li><code>1567523084803520.koat</code></li>
+      <li><code>1567523039443195.koat</code></li>
+    </ul>
 
     <h3>Evaluation</h3>
 
