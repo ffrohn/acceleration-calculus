@@ -319,9 +319,9 @@
       <li><a href="./nonterm/ultimate.html">Ultimate</a></li>
       <li><a href="./nonterm/verymax.html">VeryMax</a></li>
       <li><a href="./nonterm/loat_no_inc.html">LoAT without <i>monotonic increase</i></a></li>
-      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>via eventual increase</i></a></li>
+      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>eventual increase</i></a></li>
       <li><a href="./nonterm/loat_no_fp.html">LoAT without <i>fixpoints</i></a></li>
-      <li><a href="./nonterm/loat_trivial.html">LoAT without <i>via eventual increase</i> and <i>fixpoints</i></a></li>
+      <li><a href="./nonterm/loat_trivial.html">LoAT without <i>eventual increase</i> and <i>fixpoints</i></a></li>
     </ul>
 
   </body>
