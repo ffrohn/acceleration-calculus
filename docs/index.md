@@ -277,96 +277,33 @@
       <li>For VeryMax, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=9339">version from the termination competition 2019</a>.</li>
     </ul>
 
-    <h3>StarExec-Jobs</h3>
+    <h3>Invoking the tools</h3>
 
     <p>
-      Below we provide links to the StarExec-Jobs of our evaluation.
+      Below we show how to invoke the different tools and configurations that we evaluated.
     </p>
     <ul>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48377">LoAT</a>
-        <ul><li>Invocation: <code>loat-static --mode recurrent_set $INPUT</code></li></ul></li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48371">AProVE</a>
-        <ul><li>Invocation: <code>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</code></li></ul></li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48677">AProVE non-termination only</a>
+      <li>LoAT: <code>loat-static --mode recurrent_set $INPUT</code></li>
+      <li>AProVE: <code>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 $INPUT</code></li>
+      <li>AProVE NT: <code>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 -s llvm-nonterm.strategy $INPUT</code>
         <ul>
-          <li>Invocation: <code>java -Xmx14G -Xms14G -ea -jar aprove.jar -m wst -w 4 -s llvm-nonterm.strategy $INPUT</code></li>
           <li>you can find the file <code>llvm-nonterm.strategy</code> <a href="llvm-nonterm.strategy">here</a></li>
         </ul>
       </li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=47922">iRankFinder</a>
-        <ul><li>Configuration: <code>competition</code></li></ul></li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48156">iRankFinder non-termination only</a>
-        <ul><li>Invocation: <code>irankfinder -nt monotonicrecset -f $INPUT</code></li></ul></li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48369">RevTerm</a>
+      <li>iRankFinder: StarExec-configuration <code>competition</code></li>
+      <li>iRankFinder NT: <code>irankfinder -nt monotonicrecset -f $INPUT</code></li>
+      <li>RevTerm: we used the following two invocations, where the first one was wrapped with <code>timeout 30</code>
         <ul>
-          <li>Invocations:
-            <ul>
-              <li><code>RevTerm.sh $INPUT -linear part1 mathsat 2 1</code></li>
-              <li><code>RevTerm.sh $INPUT -linear part2 mathsat 2 1</code></li>
-            </ul>
-          </li>
+          <li><code>RevTerm.sh $INPUT -linear part1 mathsat 2 1</code></li>
+          <li><code>RevTerm.sh $INPUT -linear part2 mathsat 2 1</code></li>
         </ul>
       </li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48368">Ultimate</a>
-        <ul><li>Configuration: <code>default</code></li></ul></li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/job.jsp?id=48774">VeryMax</a>
-        <ul><li>Configuration: <code>termcomp19_ITS</code></li></ul></li>
-    </ul>
-
-    <h3>Zip-Files with Results</h3>
-    <p>
-      As StarExec might be temporarily unavailable due to updates, we also provide zip-files with the results and the full output of all tools.
-    </p>
-    <ul>
-      <li>LoAT
-        <ul>
-          <li><a href="jobs/loat_info.zip">results</a></li>
-          <li><a href="jobs/loat_output.zip">full output</a></li>
-        </ul>
-      </li>
-      <li>AProVE
-        <ul>
-          <li><a href="jobs/aprove_info.zip">results</a></li>
-          <li><a href="jobs/aprove_output.zip">full output</a></li>
-        </ul>
-      </li>
-      <li>AProVE non-termination only
-        <ul>
-          <li><a href="jobs/aprove_nonterm_info.zip">results</a></li>
-          <li><a href="jobs/aprove_nonterm_output_part_1.zip">full output -- part 1</a></li>
-          <li><a href="jobs/aprove_nonterm_output_part_2.zip">full output -- part 2</a></li>
-        </ul>
-      </li>
-      <li>iRankFinder
-        <ul>
-          <li><a href="jobs/irankfinder_info.zip">results</a></li>
-          <li><a href="jobs/irankfinder_output.zip">full output</a></li>
-        </ul>
-      </li>
-      <li>iRankFinder non-termination only
-        <ul>
-          <li><a href="jobs/irankfinder_nonterm_info.zip">results</a></li>
-          <li><a href="jobs/irankfinder_nonterm_output.zip">full output</a></li>
-        </ul>
-      </li>
-      <li>RevTerm
-        <ul>
-          <li><a href="jobs/revterm_info.zip">results</a></li>
-          <li><a href="jobs/revterm_output.zip">full output</a></li>
-        </ul>
-      </li>
-      <li>Ultimate
-        <ul>
-          <li><a href="jobs/ultimate_info.zip">results</a></li>
-          <li><a href="jobs/ultimate_output.zip">full output</a></li>
-        </ul>
-      </li>
-      <li>VeryMax
-        <ul>
-          <li><a href="jobs/verymax_info.zip">results</a></li>
-          <li><a href="jobs/verymax_output.zip">full output</a></li>
-        </ul>
-      </li>
+      <li>Ultimate: StarExec-Configuration <code>default</code></li>
+      <li>VeryMax: StarExec-Configuration <code>termcomp19_ITS</code></li>
+      <li>LoAT without <i>monotonic increase</i>: <code>loat-static --mode recurrent_set_no_inc $INPUT</code></li>
+      <li>LoAT without <i>eventual increase</i>: <code>loat-static --mode recurrent_set_no_ev_inc $INPUT</code></li>
+      <li>LoAT without <i>fixpoints</i>: <code>loat-static --mode recurrent_set_no_fp $INPUT</code></li>
+      <li>LoAT without <i>eventual increase</i> and <i>fixpoints</i>: <code>loat-static --mode recurrent_set_trivial $INPUT</code></li>
     </ul>
 
     <h3>Detailed Results</h3>
@@ -374,7 +311,6 @@
     Below we provide tables with the detailed results of our benchmarks:
     <ul>
       <li><a href="./nonterm/loat.html">LoAT</a></li>
-      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>non-termination via eventual increase</i></a></li>
       <li><a href="./nonterm/aprove.html">AProVE</a></li>
       <li><a href="./nonterm/aprove_nt.html">AProVE NT</a></li>
       <li><a href="./nonterm/irankfinder.html">iRankFinder</a></li>
@@ -382,6 +318,10 @@
       <li><a href="./nonterm/revterm.html">RevTerm</a></li>
       <li><a href="./nonterm/ultimate.html">Ultimate</a></li>
       <li><a href="./nonterm/verymax.html">VeryMax</a></li>
+      <li><a href="./nonterm/loat_no_inc.html">LoAT without <i>monotonic increase</i></a></li>
+      <li><a href="./nonterm/loat_no_ev_inc.html">LoAT without <i>via eventual increase</i></a></li>
+      <li><a href="./nonterm/loat_no_fp.html">LoAT without <i>fixpoints</i></a></li>
+      <li><a href="./nonterm/loat_trivial.html">LoAT without <i>via eventual increase</i> and <i>fixpoints</i></a></li>
     </ul>
 
   </body>
