@@ -231,7 +231,7 @@
       </code>
     </p>
 
-    <h1 id="nonterm"><a href="https://arxiv.org/abs/2202.04546">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
+    <h1 id="nonterm"><a href="https://arxiv.org/abs/2111.13952">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
 
     <p>
       For our evaluation of our novel calculus for loop acceleration, see <a href="index.html#accel">above</a>.
