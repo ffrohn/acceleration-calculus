@@ -277,7 +277,7 @@
       <li>For VeryMax, we used the <a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=9339">version from the termination competition 2019</a>.</li>
     </ul>
 
-    <h3>Invoking the tools</h3>
+    <h3>Invoking the Tools</h3>
 
     <p>
       Below we show how to invoke the different tools and configurations that we evaluated.
