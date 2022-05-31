@@ -231,6 +231,11 @@
       </code>
     </p>
 
+    <p>
+      Here, the updates to the variables <code>x_1</code>, ..., <code>x_d</code> are <i>simultaneous</i>:
+      For example, if we have assignments <code>x_1 := x_1 + 1</code> and <code>x_2 := x_1</code>, the new value of <code>x_2</code> will be the value that <code>x_1</code> had <i>before</i> the assignment <code>x_1 := x_1 + 1</code> in the current loop iteration.
+    </p>
+
     <h1 id="nonterm"><a href="https://arxiv.org/abs/2111.13952">A Calculus for Modular Loop Acceleration and Non-Termination Proofs</a></h1>
 
     <p>
