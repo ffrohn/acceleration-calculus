@@ -247,8 +247,8 @@
 
     <p>
       We provide a
-      <a href="https://github.com/aprove-developers/LoAT/releases/tag/sttt21">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
-      Apart from that, LoAT is open-source and the source code of the version that was used for our evaluation is available on <a href="https://github.com/aprove-developers/LoAT/tree/sttt21">Github</a>.
+      <a href="https://github.com/aprove-developers/LoAT/releases/tag/sttt-final">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
+      Apart from that, LoAT is open-source and the source code of the version that was used for our evaluation is available on <a href="https://github.com/aprove-developers/LoAT/tree/sttt-final">Github</a>.
     </p>
 
 
